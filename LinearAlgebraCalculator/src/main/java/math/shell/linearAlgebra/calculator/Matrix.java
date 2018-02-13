@@ -615,6 +615,7 @@ public class Matrix
         return identityMatrix;
     }
 
+
     /**
      *	Converts a Matrix to its string representation
      *	String represenation starts with '[' and ends with ']׳. A comma denotes a new value, moving from value in (i,j) to (i,j+1). A '|' denotes moving to the next line, moving from (i,j) to (i+1,j).
@@ -627,6 +628,7 @@ public class Matrix
      *
      *	@return String String represenation of Matrix
      */
+    @Override
     public String toString()
     {
         String matrixString = "[";
@@ -690,5 +692,7 @@ public class Matrix
 
         return true;
     }
+
+
 
 }

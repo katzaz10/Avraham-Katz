@@ -15,7 +15,6 @@ public class InterfaceMethods
 
     public static String bump = "   ";
 
-
     /**
      *	Outprints an intro statement to the calculator
      */
@@ -170,15 +169,14 @@ public class InterfaceMethods
                 System.out.println(bump + "Exit program:");
                 System.out.println(bump + bump + "1. 'exit' 				(type in command 'exit' and enter)");
                 break;
-            default:
-                System.out.println("ERROR: no operation '" + format + "' on list");
         }
         System.out.printf("********************************************************************************************************************************");
     }
 
 
+
     /**
-     *	Allows the user to input which format they want to look up, and then outprints this format, keeps looping until user would like to exit format menu or exit program
+     *  Finds the operation user wants to see format of, outprints format, and continues to loop until user enters '0' or "exit"
      */
     public static void findFormat()
     {
@@ -235,7 +233,6 @@ public class InterfaceMethods
             }
         }
     }
-
 
 
 
