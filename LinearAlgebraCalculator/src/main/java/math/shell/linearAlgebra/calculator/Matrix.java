@@ -231,7 +231,10 @@ public class Matrix
         }
     }
 
-
+    /*
+    *   Was having issues where by using getWrappedMatrix() and then doing matrix operations on the returned 2D array, was directly affecting the Matrix object the 2D array was coming from.
+    *   To fix this issue, when using getWrappedMatrix() first creates a new Matrix based on the 2D array in the original Matrix object, and then returns the 2D array from that Matrix object.
+    */
     public BigDecimal[][] getWrappedMatrix()
     {
         Matrix matrixUsing = new Matrix(this.wrappedMatrix);
