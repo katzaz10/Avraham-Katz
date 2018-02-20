@@ -163,7 +163,7 @@ public class InterfaceMethods
                 System.out.println(bump + bump + "1. 'M = M' 				(if copying matrix from second variable and storing in first variable)");
                 System.out.println(bump + bump + "2. '= M' 					(if storing last output of calculator)");
                 System.out.println(bump + bump + "3. 'M = O' 				(if storing output of operation O)");
-                System.out.println(bump + bump + "4. 'M = [R R R | R R R| R R R|]' 		(if creating new matrix with values of type R)");
+                System.out.println(bump + bump + "4. 'M = [R, R, R | R, R, R| R, R,frmt R|]' 		(if creating new matrix with values of type R)");
                 break;
             case 19:
                 System.out.println(bump + "Exit program:");
