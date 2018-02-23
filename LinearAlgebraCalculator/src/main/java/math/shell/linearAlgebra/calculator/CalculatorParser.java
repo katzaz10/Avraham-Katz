@@ -1,5 +1,7 @@
 package math.shell.linearAlgebra.calculator;
 
+import org.omg.CORBA.INTERNAL;
+
 import java.math.BigDecimal;
 
 /**
@@ -477,7 +479,7 @@ public class CalculatorParser
                 nullStateCheck();
                 matrixTypeCheck();
 
-                Matrix matrix = LastMatrixOutput.Singleton.getLastOutput(); //create InverseQuery
+                Matrix matrix = LastMatrixOutput.Singleton.getLastOutput();
                 Matrix finalMatrix = matrix.inverse();
                 LastMatrixOutput.Singleton.add(finalMatrix);
                 currentType = OutputType.MATRIX;
@@ -488,7 +490,7 @@ public class CalculatorParser
             {
                 lengthCheck(string, 6);
 
-                Matrix matrix = matrixFromString(string, nextSpot); //create InverseQuery
+                Matrix matrix = matrixFromString(string, nextSpot);
                 Matrix finalMatrix = matrix.inverse();
                 LastMatrixOutput.Singleton.add(finalMatrix);
                 currentType = OutputType.MATRIX;
