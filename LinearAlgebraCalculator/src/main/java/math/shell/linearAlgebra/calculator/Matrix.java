@@ -219,26 +219,13 @@ public class Matrix
         }
     }
 
-
-    /**
-    *   Was having issues where by using getWrappedMatrix() and then doing matrix operations on the returned 2D array, was directly affecting the Matrix object the 2D array was coming from.
-    *   To fix this issue, when using getWrappedMatrix() first creates a new Matrix based on the 2D array in the original Matrix object, and then returns the 2D array from that Matrix object.
-    *   When creating the new Matrix did not want the matrix to go through all of the matrix constructor tests, so made this constructor that does not do all the tests
-    *   @param wrappedMatrix 2d array from original matrix.
-     *  @param copy boolean used to know to use this constructor, actual value of boolean not important, can be true or false.
-     *  @return Matrix copied matrix without any fields filled except for wrappedMatrix
-    */
-    private Matrix(BigDecimal[][] wrappedMatrix, boolean copy)
-    {
-        this.wrappedMatrix = wrappedMatrix;
-    }
-
-    /**
-    *   @see math.shell.linearAlgebra.calculator.Matrix#Matrix(BigDecimal[][], boolean)
+    /*
+     *   Was having issues where by using getWrappedMatrix() and then doing matrix operations on the returned 2D array, was directly affecting the Matrix object the 2D array was coming from.
+     *   To fix this issue, when using getWrappedMatrix() first creates a new Matrix based on the 2D array in the original Matrix object, and then returns the 2D array from that Matrix object.
     */
     public BigDecimal[][] getWrappedMatrix()
     {
-        Matrix matrixUsing = new Matrix(this.wrappedMatrix, true);
+        Matrix matrixUsing = new Matrix(this.wrappedMatrix);
         return matrixUsing.wrappedMatrix;
     }
 
