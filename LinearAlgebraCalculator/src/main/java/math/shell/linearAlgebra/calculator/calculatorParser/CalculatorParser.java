@@ -27,6 +27,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the reduced row echelon form operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
      */
@@ -62,6 +63,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the row echelon form operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
      */
@@ -97,6 +99,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the inverse operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
      */
@@ -132,6 +135,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the matrix multiplication or scalar multiplication operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      */
     private CalculatorQuery parseMultiplicationSymbol() throws NothingInQueueException
@@ -209,6 +213,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the matrix addition operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
      */
@@ -247,6 +252,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the matrix subtraction operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
      */
@@ -284,9 +290,9 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the transpose or matrix to power n operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
-     *	@throws NonSquareMatrixException Thrown if matrix not a square matrix, both operations require a square matrix
      */
     private CalculatorQuery parseCarrotSymbol() throws NothingInQueueException, NoMatrixInQueueException
     {
@@ -362,9 +368,9 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the minor operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
-     *	@throws NonSquareMatrixException Thrown if matrix not a square matrix
      */
     private CalculatorQuery parseMNR() throws NothingInQueueException, NoMatrixInQueueException
     {
@@ -460,9 +466,9 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the cofactor matrix operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
-     *	@throws NonSquareMatrixException Thrown if matrix not a square matrix
      */
     private CalculatorQuery parseCOFM() throws NothingInQueueException, NoMatrixInQueueException
     {
@@ -496,9 +502,9 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the adjoint matrix operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
-     *	@throws NonSquareMatrixException Thrown if matrix not a square matrix
      */
     private CalculatorQuery parseADJM() throws NothingInQueueException, NoMatrixInQueueException
     {
@@ -533,9 +539,9 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the trace operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
-     *	@throws NonSquareMatrixException Thrown if matrix not a square matrix
      */
     private CalculatorQuery parseTR() throws NothingInQueueException, NoMatrixInQueueException
     {
@@ -569,9 +575,9 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the determinant operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
-     *	@throws NonSquareMatrixException Thrown if matrix not a square matrix
      */
     private CalculatorQuery parseDET() throws NothingInQueueException, NoMatrixInQueueException
     {
@@ -605,9 +611,9 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the cofactor operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
-     *	@throws NonSquareMatrixException Thrown if matrix not a square matrix
      */
     private CalculatorQuery parseCOF() throws NothingInQueueException, NoMatrixInQueueException
     {
@@ -703,6 +709,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the identity matrix operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      */
     private CalculatorQuery parseIDM()
     {
@@ -738,6 +745,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the storages operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
      */
@@ -777,6 +785,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the variable designation operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      *	@throws NothingInQueueException Thrown if calculator at start state and attempting to use last output
      *	@throws NoMatrixInQueueException Thrown if last output was not of type MATRIX and attempting to use last output
      */
@@ -831,6 +840,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the exit operation, and in the process writes all Matrices stored in calculator storages to external file "calculator_storage.txt" for subsequent runnings of program
+     *  @return CalculatorQuery Query of operation user looking to perform
      */
     public CalculatorQuery parseEXIT()
     {
@@ -841,6 +851,7 @@ public class CalculatorParser
 
     /**
      *	Determines if the calculator should do the format menu operation
+     *  @return CalculatorQuery Query of operation user looking to perform
      */
     private CalculatorQuery parseFRMT()
     {
@@ -850,22 +861,8 @@ public class CalculatorParser
 
 
     /**
-     *  A series of operations not public to the user
-     **/
-    /*private static void parseHIDDEN()
-    {
-        if (this.input.equals("clearinternalstorage"))
-        {
-            fallThroughCheck = HitOrMiss.HIT;
-
-            InternalStorage.Singleton.clear();
-            System.out.printf("%n%ninternal storages cleared%n%n");
-        }
-    }*/
-
-
-    /**
      *	Parses the user input to determine the proper operation to perform
+     *  @return CalculatorQuery Query of operation user looking to perform
      */
     public CalculatorQuery parse() throws NothingInQueueException, NoMatrixInQueueException, IncorrectSyntaxException
     {
@@ -978,8 +975,6 @@ public class CalculatorParser
             returnQuery = parseFRMT();
             return returnQuery;
         }
-
-        //parseHIDDEN();
 
         else
         {
