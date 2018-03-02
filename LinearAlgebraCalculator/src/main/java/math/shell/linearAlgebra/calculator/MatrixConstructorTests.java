@@ -206,32 +206,4 @@ public class MatrixConstructorTests
 
         return false;
     }
-
-
-
-    /**
-     *	Tests to see if a 2D array is a symmetric matrix
-     *	@param matrix 2D array to be wrapped in Matrix object
-     *	@return boolean Whether symmetric matrix or not
-     */
-    public static boolean symmetricMatrix(BigDecimal[][] matrix)
-    {
-        if (!squareMatrix(matrix))
-        {
-            return false;
-        }
-
-        for (int i = 0; i < MultiDimensionalArray.columnHeight(matrix); i++)
-        {
-            for (int j = 0; j < MultiDimensionalArray.rowLength(matrix); j++)
-            {
-                if (matrix[i][j].compareTo(matrix[j][i]) != 0)
-                {
-                    return false;
-                }
-            }
-        }
-
-        return true;
-    }
 }

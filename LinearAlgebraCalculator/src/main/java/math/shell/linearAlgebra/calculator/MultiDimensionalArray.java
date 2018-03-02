@@ -1,5 +1,7 @@
 package math.shell.linearAlgebra.calculator;
 
+import math.shell.linearAlgebra.calculator.exceptions.ErrorMessages;
+
 import java.math.BigDecimal;
 
 /**
@@ -33,7 +35,7 @@ public class MultiDimensionalArray
 
 
     /**
-     *	Test to see if the row attempting to use in a method is less than 0 or greater than the largest row number. Throws an exception if not
+     *	Test to see if the row attempting to use in a method is less than 0 or greater than the largest row number. Throws an exceptions if not
      *	@param matrix 2D array testing
      *	@param rowNumber Number of row testing
      */
@@ -52,7 +54,7 @@ public class MultiDimensionalArray
 
 
     /**
-     *	Test to see if the column attempting to use in a method is less than 0 or greater than the largest column number. Throws an exception if not
+     *	Test to see if the column attempting to use in a method is less than 0 or greater than the largest column number. Throws an exceptions if not
      *	@param matrix 2D array testing
      *	@param columnNumber Number of column testing
      */

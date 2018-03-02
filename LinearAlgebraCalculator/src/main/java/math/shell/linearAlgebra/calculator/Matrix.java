@@ -1,5 +1,11 @@
 package math.shell.linearAlgebra.calculator;
 
+import math.shell.linearAlgebra.calculator.utilities.StringUtils;
+import math.shell.linearAlgebra.calculator.exceptions.ErrorMessages;
+import math.shell.linearAlgebra.calculator.exceptions.NonSquareMatrixException;
+import math.shell.linearAlgebra.calculator.exceptions.UndefinedSolutionException;
+import math.shell.linearAlgebra.calculator.linearAlgebraOperations.*;
+
 import java.math.BigDecimal;
 
 /**
@@ -24,8 +30,6 @@ public class Matrix
     private boolean upperTriangularMatrixStatus;
     private boolean lowerTriangularMatrixStatus;
     private boolean triangularMatrixStatus;
-    private boolean symmetricMatrixStatus;
-
 
 
     /**
@@ -53,7 +57,6 @@ public class Matrix
             this.upperTriangularMatrixStatus = false;
             this.lowerTriangularMatrixStatus = false;
             this.triangularMatrixStatus = false;
-            this.symmetricMatrixStatus = false;
         }
 
         else
@@ -78,7 +81,6 @@ public class Matrix
                 this.upperTriangularMatrixStatus = true;
                 this.lowerTriangularMatrixStatus = true;
                 this.triangularMatrixStatus = true;
-                this.symmetricMatrixStatus = true;
             }
 
             else
@@ -94,14 +96,11 @@ public class Matrix
                     if (this.lowerTriangularMatrixStatus == true)
                     {
                         this.diagonalMatrixStatus = true;
-                        this.symmetricMatrixStatus = true;
                     }
 
                     else
                     {
                         this.diagonalMatrixStatus = false;
-
-                        this.symmetricMatrixStatus = MatrixConstructorTests.symmetricMatrix(wrappedMatrix);
                     }
                 }
 
@@ -113,15 +112,12 @@ public class Matrix
 
                     if (this.lowerTriangularMatrixStatus == true)
                     {
-                        this.symmetricMatrixStatus = false;
                         this.triangularMatrixStatus = true;
                     }
 
                     else
                     {
                         this.triangularMatrixStatus = false;
-
-                        this.symmetricMatrixStatus = MatrixConstructorTests.symmetricMatrix(wrappedMatrix);
                     }
                 }
             }
@@ -132,7 +128,7 @@ public class Matrix
     /**
      * 	Constructs a Matrix object that wraps a 2D array. The 2D array wrapped is constructed from a string. Matrix holds identifying information about what type of matrix it is
      * 	@param stringContainingMultidimensionalArray This string is converted into a 2d array to be wrapped by matrix
-     * 	@see math.shell.linearAlgebra.calculator.StringUtils#multiDimensionalArrayFromString(String)
+     * 	@see StringUtils#multiDimensionalArrayFromString(String)
      */
     public Matrix(String stringContainingMultidimensionalArray)
     {
@@ -156,7 +152,6 @@ public class Matrix
             this.upperTriangularMatrixStatus = false;
             this.lowerTriangularMatrixStatus = false;
             this.triangularMatrixStatus = false;
-            this.symmetricMatrixStatus = false;
         }
 
         else
@@ -181,7 +176,6 @@ public class Matrix
                 this.upperTriangularMatrixStatus = true;
                 this.lowerTriangularMatrixStatus = true;
                 this.triangularMatrixStatus = true;
-                this.symmetricMatrixStatus = true;
             }
 
             else
@@ -197,14 +191,11 @@ public class Matrix
                     if (this.lowerTriangularMatrixStatus == true)
                     {
                         this.diagonalMatrixStatus = true;
-                        this.symmetricMatrixStatus = true;
                     }
 
                     else
                     {
                         this.diagonalMatrixStatus = false;
-
-                        this.symmetricMatrixStatus = MatrixConstructorTests.symmetricMatrix(wrappedMatrix);
                     }
                 }
 
@@ -216,15 +207,12 @@ public class Matrix
 
                     if (this.lowerTriangularMatrixStatus == true)
                     {
-                        this.symmetricMatrixStatus = false;
                         this.triangularMatrixStatus = true;
                     }
 
                     else
                     {
                         this.triangularMatrixStatus = false;
-
-                        this.symmetricMatrixStatus = MatrixConstructorTests.symmetricMatrix(wrappedMatrix);
                     }
                 }
             }
@@ -299,12 +287,6 @@ public class Matrix
     public boolean getDiagonalStatus()
     {
         return this.diagonalMatrixStatus;
-    }
-
-
-    public boolean getSymmetricStatus()
-    {
-        return this.symmetricMatrixStatus;
     }
 
 
@@ -459,6 +441,7 @@ public class Matrix
         return MatrixArithmetic.scalarMultiplication(this, scalar);
     }
 
+
     /**
      *	Matrix multiplication of two Matrices
      *	@param otherMatrix Value multiplying Matrix by
@@ -549,7 +532,7 @@ public class Matrix
      */
     public Matrix minor(int row, int column) throws NonSquareMatrixException
     {
-        return Determinant.minor(this, row, column);
+        return Minor.minor(this, row, column);
     }
 
 
@@ -562,7 +545,7 @@ public class Matrix
      */
     public BigDecimal cofactor(int row, int column) throws NonSquareMatrixException
     {
-        return Determinant.cofactor(this, row, column);
+        return CofactorAndAdjoint.cofactor(this, row, column);
     }
 
 
@@ -573,7 +556,7 @@ public class Matrix
      */
     public Matrix cofactorMatrix() throws NonSquareMatrixException
     {
-        return Determinant.cofactorMatrix(this);
+        return CofactorAndAdjoint.cofactorMatrix(this);
     }
 
 
@@ -584,7 +567,7 @@ public class Matrix
      */
     public Matrix adjointMatrix() throws NonSquareMatrixException
     {
-        return Determinant.adjointMatrix(this);
+        return CofactorAndAdjoint.adjointMatrix(this);
     }
 
 
@@ -640,7 +623,7 @@ public class Matrix
         {
             for (int j = 0; j < this.getRowLength(); j++)
             {
-                matrixString = matrixString + this.getWrappedMatrix()[i][j];
+                matrixString = matrixString + this.getWrappedMatrix()[i][j].stripTrailingZeros().toPlainString();
 
                 if (j != this.getRowLength() - 1)
                 {
@@ -686,9 +669,59 @@ public class Matrix
         {
             for (int j = 0; j < this.getRowLength(); j++)
             {
+               if (this.getWrappedMatrix()[i][j].compareTo(otherMatrix.getWrappedMatrix()[i][j]) != 0)
+               {
+                   return false;
+               }
+            }
+        }
+
+        return true;
+    }
+
+
+    /**
+     * Finds if 2 matrices are equal, each value in spot i,j of matrix #1 can be within .000000001 of spot i,j in matrix #2
+     * @param that Other matrix comparing to
+     * @return boolean Whether they are equal within the margin or not
+     */
+    public boolean equalsWithinMargin(Object that)
+    {
+        if (this == that)
+        {
+            return true;
+        }
+
+        if (that == null)
+        {
+            return false;
+        }
+
+        if (getClass() != that.getClass())
+        {
+            return false;
+        }
+
+        Matrix otherMatrix = (Matrix) that;
+
+        if (!this.sizeEquals(otherMatrix))
+        {
+            return false;
+        }
+
+        for (int i = 0; i < this.getColumnHeight(); i++)
+        {
+            for (int j = 0; j < this.getRowLength(); j++)
+            {
                 if (this.getWrappedMatrix()[i][j].compareTo(otherMatrix.getWrappedMatrix()[i][j]) != 0)
                 {
-                    return false;
+                    BigDecimal marginOfError = new BigDecimal(.000000001);
+                    BigDecimal subtractValues = this.getWrappedMatrix()[i][j].subtract(otherMatrix.getWrappedMatrix()[i][j]).abs();
+
+                    if (subtractValues.compareTo(marginOfError) != -1)
+                    {
+                        return false;
+                    }
                 }
             }
         }
