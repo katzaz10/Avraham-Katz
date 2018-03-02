@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  *	A containers with one slot that holds the last calculator output of type BIGDECIMAL
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class LastBigDecimalOutput

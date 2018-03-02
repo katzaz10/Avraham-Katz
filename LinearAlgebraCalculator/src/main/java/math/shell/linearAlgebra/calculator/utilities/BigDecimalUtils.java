@@ -2,6 +2,12 @@ package math.shell.linearAlgebra.calculator.utilities;
 
 import java.math.BigDecimal;
 
+/**
+ *	Methods that involve working with BigDecimal
+ *	@author Avraham Katz
+ *	@version 1.1
+ */
+
 public class BigDecimalUtils
 {
     public static BigDecimal precisionCheck(BigDecimal value)

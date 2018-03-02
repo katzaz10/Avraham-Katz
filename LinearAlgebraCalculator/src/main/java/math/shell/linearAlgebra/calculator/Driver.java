@@ -14,7 +14,7 @@ import java.util.Scanner;
 /**
  *	A linear algebra calculator that does singular matrix operations that can be chained in subsequent inputs
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class Driver

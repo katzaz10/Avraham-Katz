@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 /**
  *	A series of operations that involve Matrix arithmetic
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class MatrixArithmetic

@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 /**
  *	Query for user input demanding Cofactor operation
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class CofactorQuery implements CalculatorQuery

@@ -11,7 +11,7 @@ import java.util.TreeMap;
 /**
  *	A containers that holds Matrices, mapping variable names to Matrices
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class InternalStorage

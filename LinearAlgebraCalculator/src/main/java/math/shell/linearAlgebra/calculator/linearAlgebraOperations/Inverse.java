@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 /**
  *	Finds the inverse of a matrix
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class Inverse

@@ -5,7 +5,7 @@ import math.shell.linearAlgebra.calculator.Matrix;
 /**
  *	A containers with one slot that holds the last output of type MATRIX
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class LastMatrixOutput

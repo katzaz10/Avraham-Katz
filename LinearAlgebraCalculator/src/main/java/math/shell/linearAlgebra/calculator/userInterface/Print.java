@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 /**
  *	A series of methods that involve printing
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class Print

@@ -10,7 +10,7 @@ import math.shell.linearAlgebra.calculator.userInterface.Print;
 /**
  *	Query for user input demanding Adjoint Matrix Operation
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class AdjointMatrixQuery implements CalculatorQuery

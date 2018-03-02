@@ -11,7 +11,7 @@ import java.math.RoundingMode;
 /**
  *	String Utility methods for the Calculator Parser
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 

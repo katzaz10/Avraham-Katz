@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  *	Constructs a Matrix	object that can be used for linear algebra purposes. Values in the Matrix are of type BigDecimal.
  *	The Matrix holds identifing information such as if it is a 2x2, 3x3, square, identity, diagonal, triangular, upper triangular, lower triangular, or symmetrix Matrix.
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class Matrix

@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 /**
  *	Query for user input demanding Scalar Multiplication Operation
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class ScalarMultiplicationQuery implements CalculatorQuery

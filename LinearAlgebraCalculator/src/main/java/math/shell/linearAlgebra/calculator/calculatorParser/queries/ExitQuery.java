@@ -5,7 +5,7 @@ import math.shell.linearAlgebra.calculator.storages.ExternalStorage;
 /**
  *	Query for user input demanding Exit Operation
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class ExitQuery implements CalculatorQuery

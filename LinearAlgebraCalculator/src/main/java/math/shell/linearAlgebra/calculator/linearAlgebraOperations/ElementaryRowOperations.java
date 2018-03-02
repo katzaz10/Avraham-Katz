@@ -10,7 +10,7 @@ import java.math.RoundingMode;
 /**
  *	A series of elementary row operations that are the basis of linear algebra
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class ElementaryRowOperations

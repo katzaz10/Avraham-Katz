@@ -7,7 +7,7 @@ import math.shell.linearAlgebra.calculator.exceptions.NothingInQueueException;
 /**
  *	Interface for queries returned by Parser
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public interface CalculatorQuery

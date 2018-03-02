@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 /**
  *	Methods that involve operations on 2D arrays
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class MultiDimensionalArray

@@ -8,7 +8,7 @@ import math.shell.linearAlgebra.calculator.userInterface.Print;
 /**
  *	Query for user input demanding Identity Matrix Operation
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class IdentityMatrixQuery implements CalculatorQuery

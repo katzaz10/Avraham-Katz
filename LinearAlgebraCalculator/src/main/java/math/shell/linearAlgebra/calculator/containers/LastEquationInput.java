@@ -3,7 +3,7 @@ package math.shell.linearAlgebra.calculator.containers;
 /**
  *	A containers with one slot that holds the last equation the user inputs
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class LastEquationInput

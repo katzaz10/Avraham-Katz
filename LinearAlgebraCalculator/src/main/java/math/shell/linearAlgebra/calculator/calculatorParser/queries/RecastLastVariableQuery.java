@@ -9,7 +9,7 @@ import math.shell.linearAlgebra.calculator.userInterface.Print;
 /**
  *	Query for user input demanding Recasting a variable Operation
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class RecastLastVariableQuery implements CalculatorQuery

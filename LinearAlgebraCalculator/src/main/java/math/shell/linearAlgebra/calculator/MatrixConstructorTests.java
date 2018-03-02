@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  *	A series of tests on 2D arrays, used for finding attributes of matrices when making them
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class MatrixConstructorTests

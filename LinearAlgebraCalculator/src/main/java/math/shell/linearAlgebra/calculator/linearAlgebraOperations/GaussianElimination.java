@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 /**
  *	Reduce matrices to row echelon form and reduced row echelon form
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class GaussianElimination

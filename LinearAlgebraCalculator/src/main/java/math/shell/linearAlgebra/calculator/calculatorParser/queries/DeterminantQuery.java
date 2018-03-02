@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 /**
  *	Query for user input demanding Determinant Operation
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class DeterminantQuery implements CalculatorQuery

@@ -7,7 +7,7 @@ import math.shell.linearAlgebra.calculator.exceptions.NothingInQueueException;
 /**
  *	A containers with one slot that keeps track of the last output type of the calculator
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class LastOutputType

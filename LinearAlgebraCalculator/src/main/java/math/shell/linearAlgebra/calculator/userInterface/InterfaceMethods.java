@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  *	Methods that are strictly for the calculator interface
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class InterfaceMethods

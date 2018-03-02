@@ -3,7 +3,7 @@ package math.shell.linearAlgebra.calculator.exceptions;
 /**
  *	A list of Strings used for error messages and exceptions
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class ErrorMessages

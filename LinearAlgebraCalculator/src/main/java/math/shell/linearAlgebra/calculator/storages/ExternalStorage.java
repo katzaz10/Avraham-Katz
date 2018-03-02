@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  *	Methods that deal with reading and writing the calculators external storages, stored in "calculator_storage.txt"
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class ExternalStorage

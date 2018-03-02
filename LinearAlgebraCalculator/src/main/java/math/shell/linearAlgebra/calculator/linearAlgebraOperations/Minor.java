@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 /**
  *	Operations involving minor of matrices
  *	@author Avraham Katz
- *	@version 1.0
+ *	@version 1.1
  */
 
 public class Minor
