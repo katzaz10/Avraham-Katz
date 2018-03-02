@@ -53,7 +53,7 @@ public class Driver
 
         catch (IllegalArgumentException all)
         {
-            //continue
+            //catch and leave empty to make sure calculator does not exit, but prints the println in the method that throws the IllegalArgumentException, and continues running
         }
 
 

@@ -77,14 +77,6 @@ public class InternalStorage
         }
     }
 
-    /**
-     *  Clears the internal storages of all variables and Matrices
-     */
-    public void clear()
-    {
-        this.storedInternalStorage.clear();
-    }
-
 
     /**
      * Determines if the internal storages is empty or not

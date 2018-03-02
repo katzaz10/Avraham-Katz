@@ -4,6 +4,12 @@ import math.shell.linearAlgebra.calculator.exceptions.ErrorMessages;
 import math.shell.linearAlgebra.calculator.exceptions.NoMatrixInQueueException;
 import math.shell.linearAlgebra.calculator.exceptions.NothingInQueueException;
 
+/**
+ *	A containers with one slot that keeps track of the last output type of the calculator
+ *	@author Avraham Katz
+ *	@version 1.0
+ */
+
 public class LastOutputType
 {
     /**
@@ -22,12 +28,10 @@ public class LastOutputType
     public static final LastOutputType Singleton = new LastOutputType();
 
 
-    public void setLastOutputType(OutputType lastOutput)
-    {
-        this.lastOutput = lastOutput;
-    }
-
-
+    /**
+     * Gets the last output type
+     * @return  Last output type
+     */
     public OutputType getLastOutputType()
     {
         return this.lastOutput;
@@ -35,7 +39,7 @@ public class LastOutputType
 
 
     /**
-     *	Checks to see if any operations that store a matrix or BigDecimal in the queue have been performed yet
+     *	Checks to see if any operations that store a Matrix or BigDecimal in the queue have been performed yet
      *	@throws NothingInQueueException Thrown if containers are empty and attempting to use last output
      */
     public void nullStateCheck() throws NothingInQueueException
@@ -60,12 +64,18 @@ public class LastOutputType
     }
 
 
+    /**
+     * Sets the last output type to MATRIX status
+     */
     public void setLastOutputMATRIX()
     {
         this.lastOutput = OutputType.MATRIX;
     }
 
 
+    /**
+     * Sets the last output type to BIGDECIMAL status
+     */
     public void setLastOutputBIGDECIMAL()
     {
         this.lastOutput = OutputType.BIGDECIMAL;

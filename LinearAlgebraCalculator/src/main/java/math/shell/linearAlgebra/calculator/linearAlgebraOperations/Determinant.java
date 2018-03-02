@@ -8,7 +8,7 @@ import math.shell.linearAlgebra.calculator.exceptions.ZeroRowException;
 import java.math.BigDecimal;
 
 /**
- *	Operations involving determinants, cofactors, minors, and adjoints
+ *	Operations involving determinants of Matrices
  *	@author Avraham Katz
  *	@version 1.0
  */
@@ -58,9 +58,6 @@ public class Determinant
     }
 
 
-
-
-
     /**
      *	Goes down column x of a matrix, finding the first non-zero value below row z. Once it finds this value, it pushes the row this value is in to a given row y. Whenever move row, multiply determinant by -1
      *	@param matrix 2D array row and column contained in
@@ -68,6 +65,7 @@ public class Determinant
      *	@param belowRow Number of row going down from
      *	@param rowMovingTo Number of row moving row with first non-zero value in column to
      *	@param determinant Value of determinant to be returned at end of determinant operation
+     *  @return BigDecimal Current value of the determinant
      *	@see math.shell.linearAlgebra.calculator.linearAlgebraOperations.GaussianElimination#moveFirstRowWithNonZeroValueBelowZForColumnXToRowY(BigDecimal[][], int, int, int)
      */
     private static BigDecimal moveFirstRowWithNonZeroValueBelowZForColumnXToRowYForDeterminant(BigDecimal[][] matrix, int column, int belowRow, int rowMovingTo, BigDecimal determinant)
@@ -101,6 +99,7 @@ public class Determinant
      *	@param matrix 2D array row contained in
      *	@param row Number of row
      *	@param determinant Value of determinant to be returned at end of determinant operation
+     *  @return BigDecimal Current value of the determinant
      *	@see math.shell.linearAlgebra.calculator.linearAlgebraOperations.GaussianElimination#reduceRowToGetLeadingOne(BigDecimal[][], int)
      */
     private static BigDecimal reduceRowToGetLeadingOneForDeterminant(BigDecimal[][] matrix, int row, BigDecimal determinant)
@@ -134,7 +133,7 @@ public class Determinant
 
     /**
      *	Finds the determinant of a matrix by row reduction
-     *	@param matrix Matrix finding determinant of
+     *	@param  matrix Matrix finding determinant of
      *	@return BigDecimal Determinant
      *	@throws NonSquareMatrixException Thrown if matrix not a square matrix
      */
@@ -250,10 +249,4 @@ public class Determinant
             return determinantByRowReduction(matrix);
         }
     }
-
-
-
-
-
-
 }

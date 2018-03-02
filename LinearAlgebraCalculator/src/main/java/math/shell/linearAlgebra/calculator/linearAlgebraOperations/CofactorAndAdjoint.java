@@ -6,6 +6,12 @@ import math.shell.linearAlgebra.calculator.exceptions.NonSquareMatrixException;
 
 import java.math.BigDecimal;
 
+/**
+ *	Operations involving cofactors and adjoints of matrices
+ *	@author Avraham Katz
+ *	@version 1.0
+ */
+
 public class CofactorAndAdjoint
 {
 

@@ -237,4 +237,6 @@ public class MatrixArithmetic
 
         return null; //will never get here because of square test
     }
+
+
 }
