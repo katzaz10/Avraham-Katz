@@ -170,7 +170,7 @@ public class LinearAlgebraOperationsTests {
      * Tests the inverse operation of 2x2 matrices
      */
     @Test
-    public void testInverse2x2()                                                                //doesnt work
+    public void testInverse2x2()
     {
         Matrix matrix1 = new Matrix("[6,1|5,2|]");
         Matrix resultMatrix = new Matrix("[2/7,-1/7|-5/7,6/7|]");
@@ -196,7 +196,7 @@ public class LinearAlgebraOperationsTests {
      * Tests the inverse operation
      */
     @Test
-    public void testInverse()                                                                                         //worls
+    public void testInverse()
     {
         Matrix matrix1 = new Matrix("[1,2|1,3|]");
         Matrix resultMatrix = new Matrix("[3,-2|-1,1|]");
@@ -338,16 +338,5 @@ public class LinearAlgebraOperationsTests {
         CalculatorAssert.assertMatrixEquals(resultMatrix, Matrix.identity(matrixSize));
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////
-
-
-    @Test
-    public void testInverse5()                                                                                         //worls
-    {
-        Matrix matrix1 = new Matrix("[2,0|0,3|]");
-        Matrix resultMatrix = new Matrix("[.5,0|0,1/3|]");
-
-        CalculatorAssert.assertMatrixEquals(resultMatrix, matrix1.inverse());
-    }
 
 }
