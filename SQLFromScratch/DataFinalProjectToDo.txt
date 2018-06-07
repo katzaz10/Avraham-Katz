@@ -1,3 +1,0 @@
-TO DO:
-
-1. override equals for columns using column name?
