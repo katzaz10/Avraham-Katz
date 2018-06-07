@@ -1,0 +1,31 @@
+::::
+Data Structures Final Project Update 2/11/18:
+:::
+
+1. Learnt basics of SQL
+
+2. Cloned SQL parser repository, installed Maven, and set up dependencies
+
+3. Went through SQL Parser test class with debugger to understand what the parser was returning (an object with different descriptions of what would need to be accomplished by the project)
+
+4. Began mapping out what a database would look like. Recognized that a 2D array would be an inefficient tool for project because a database requires different object types to be used and 2D array only holds one type. So instead have begun drawing out on paper and constructing a very basic foundation of HashMaps and ArrayLists as the skeleton for the database.
+
+5. Begun constructing a Column object and Table object that hold the characteristics the SQL parser returns in object form
+
+6. In the middle of determining what methods will be necessary for Column and Table object as a basis, or ground level work, for building up the project and larger methods.	
+
+::::
+Over The Next Week:
+:::
+
+1. Go through Parser a bit more to double check and make sure I got the full understanding of the returned objects
+
+2. Continue constructing Column and Table Class
+
+3. Finalize basic skeleton of database
+
+4. Begin mapping and perhaps begin coding Create Table portion of project
+
+5. If complete that, evaluate plan going forward
+
+
