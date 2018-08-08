@@ -12,15 +12,15 @@ def order(s):
     '''Orders a string'''
     return ''.join(sorted(s))
 
-def factorial(n):
-    '''Finds the factorial of n'''
+def summation(n):
+    '''Finds the summation of n'''
     if n == 0:
         return 0
 
     if n == 1:
         return 1
 
-    return n + factorial(n - 1)
+    return n + summation(n - 1)
 
 
 def sherlockAndAnagrams(s):
@@ -33,5 +33,5 @@ def sherlockAndAnagrams(s):
             dict[orderedword] = dict.setdefault(orderedword, 0) + 1
     anagrams = 0
     for word in dict:
-        anagrams += factorial(dict[word] - 1)
+        anagrams += summation(dict[word] - 1)
     return anagrams
