@@ -3,8 +3,8 @@ def peek(arr):
     return arr[len(arr) - 1]
 
 def largestRectangle(h):
-    index = [0]
-    height = [0]
+    index = [0] #starts at 0 so peek never throws index out of bound
+    height = [0] #starts at 0 so peek never throws index out of bound
     max_area = 0
     for i in range(len(h)):
         if h[i] > peek(height):
