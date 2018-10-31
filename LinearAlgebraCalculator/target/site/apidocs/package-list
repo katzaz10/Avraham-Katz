@@ -1,9 +1,0 @@
-math.shell.linearAlgebra.calculator
-math.shell.linearAlgebra.calculator.calculatorParser
-math.shell.linearAlgebra.calculator.calculatorParser.queries
-math.shell.linearAlgebra.calculator.containers
-math.shell.linearAlgebra.calculator.exceptions
-math.shell.linearAlgebra.calculator.linearAlgebraOperations
-math.shell.linearAlgebra.calculator.storages
-math.shell.linearAlgebra.calculator.userInterface
-math.shell.linearAlgebra.calculator.utilities
